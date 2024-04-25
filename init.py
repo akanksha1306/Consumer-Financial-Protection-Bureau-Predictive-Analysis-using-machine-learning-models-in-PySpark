@@ -33,22 +33,3 @@ complaint_df = complaint_df.withColumn("sub_issue", when(complaint_df["sub_issue
 complaint_df = complaint_df.withColumn("sub_product", when(complaint_df["sub_product"] == "", "Not Available").otherwise(complaint_df["sub_product"]))
 
 
-########## 
-def has_blank_values(df, col_name):
-    """Checks if a specific column in a PySpark DataFrame has any blank values.
-
-    Args:
-        df (pyspark.sql.DataFrame): The DataFrame to check.
-        col_name (str): The name of the column to examine.
-
-    Returns:
-        bool: True if the column has at least one blank value, False otherwise.
-    """
-
-    return df.filter(df[col_name].isEmpty()).count() > 0
-
-# Example usage with single column
-if has_blank_values(complaint_df, "date_recieved"):
-    print("The 'my_column' column has blank values.")
-else:
-    print("The 'my_column' column does not have blank values.")
