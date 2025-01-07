@@ -17,10 +17,10 @@ To develop the Prediction Platform, we adopted a structured workflow encompassin
 
 ### Data Challenges and Preprocessing Techniques
 Our raw complaint data presented two key challenges:
-  1. Imbalanced target variables : Target variables for both timely response prediction and company response prediction exhibited significant class imbalances. Oversampling and, for company response, under sampling techniques were employed to create more balanced training sets.
-  2. A high-cardinality features : the "Company" feature with its 7,000 unique values required attention. Frequency encoding tackled this challenge by transforming company names into numerical values based on their frequency within the dataset, effectively reducing complexity and improving model performance.
+  1. Imbalanced target variables: Target variables for both timely response prediction and company response prediction exhibited significant class imbalances. Oversampling and, for company response, under-sampling techniques were employed to create more balanced training sets.
+  2. A high-cardinality feature: the "Company" feature with its 7,000 unique values required attention. Frequency encoding tackled this challenge by transforming company names into numerical values based on their frequency within the dataset, effectively reducing complexity and improving model performance.
 
-### Models explained
+### Models Explained
 This section explores the use of machine learning to predict two key consumer complaint outcomes: 
 1. Timely responses 
 2. The nature of the company response.
